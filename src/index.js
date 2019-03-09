@@ -9,6 +9,7 @@ const store = initStore()
 
 store.subscribe(() => console.log(store.getState()))
 
+//dummy dispatch
 store.dispatch(addExpense({ description: 'facture d\'électricité', amount: 13000, createdAt: 150 }))
 const item2 = store.dispatch(addExpense({ description: 'facture d\'eau', amount: 6500, createdAt: 300 }))
 const item = store.dispatch(addExpense({ description: 'Location voiture', amount: 8500, createdAt: 75 }))
