@@ -15,18 +15,19 @@ store.subscribe(() => {
   console.log(visibleExpensesFilter(state.expenses, state.filters))
 })
 
+
 //dummy dispatch
 store.dispatch(addExpense({ description: 'facture d\'électricité', amount: 13000, createdAt: 150 }))
-const item2 = store.dispatch(addExpense({ description: 'facture d\'eau', amount: 6500, createdAt: 300 }))
+const item2 = store.dispatch(addExpense({ description: 'Facture d\'eau', amount: 6500, createdAt: 300 }))
 const item = store.dispatch(addExpense({ description: 'Location voiture', amount: 8500, createdAt: 75 }))
-
+// console.log(store.getState())
 // store.dispatch(removeExpense(item.expense.id))
 // store.dispatch(editExpense(item2.expense.id, { description: 'magasin de vêtements', amount: 2450 }))
-store.dispatch(setSearchText('rent'))
+store.dispatch(setSearchText('facture'))
 store.dispatch(sortByAmount())
 store.dispatch(sortByDate())
 
-
+// console.log(store.getState())
 const jsx = (
   <Provider store={store}>
     <AppRouter />
