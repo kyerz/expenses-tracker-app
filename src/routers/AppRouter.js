@@ -1,7 +1,9 @@
 import React from 'react'
 import Header from '../components/Header'
+
 import ExpenseDashBoardPage from '../components/ExpenseDashboardPage'
 import AddExpensePage from '../components/AddExpensePage'
+import NotFoundPage from '../components/NotFoundPage'
 
 
 const AppRouter = () => (
