@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import './styles/base/style.css'
 import initStore from './store/initStore'
 import { addExpense, removeExpense, editExpense } from './actions/expenses'
-import { setSearchText } from './actions/filters'
+import { setSearchText, sortByAmount, sortByDate } from './actions/filters'
 import visibleExpensesFilter from './filters/expenses'
 
 const store = initStore()
@@ -23,6 +23,9 @@ const item = store.dispatch(addExpense({ description: 'Location voiture', amount
 // store.dispatch(removeExpense(item.expense.id))
 // store.dispatch(editExpense(item2.expense.id, { description: 'magasin de vêtements', amount: 2450 }))
 store.dispatch(setSearchText('rent'))
+store.dispatch(sortByAmount())
+store.dispatch(sortByDate())
+
 
 const jsx = (
   <Provider store={store}>
