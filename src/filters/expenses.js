@@ -1,8 +1,8 @@
 //filter expenses
 
 const visibleExpensesFilter = (expenses, filters) => {
-  //in progress
-  return expenses
+
+  return expenses, filters
 }
 
 export default visibleExpensesFilter

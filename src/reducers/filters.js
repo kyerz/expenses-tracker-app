@@ -7,6 +7,11 @@ const initStateFiltersReducer = {
 
 const filtersReducer = (state = initStateFiltersReducer, action) => {
   switch (action.type) {
+    case 'SET_SEARCH_TEXT':
+      return {
+        ...state,
+        text: action.text
+      }
     default:
       return state
   }
