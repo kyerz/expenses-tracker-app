@@ -2,7 +2,7 @@ import React from 'react'
 
 const AddExpensePage = () => (
   <div>
-    AddExpensePage component
+    <h2>Add ExpensePage component</h2>
   </div>
 )
 

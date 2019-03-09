@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExpenseDashboardPage = () => (
   <div>
-    ExpenseDashboardPage component
+    <h2>Expense Dashboard Page component</h2>
   </div>
 )
 
