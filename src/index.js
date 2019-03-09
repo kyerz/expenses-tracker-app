@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import AppRouter from './routers/AppRouter'
+import { Provider } from 'react-redux'
 import './styles/base/style.css'
 import initStore from './store/initStore'
 import { addExpense, removeExpense, editExpense } from './actions/expenses'
@@ -18,4 +19,10 @@ store.dispatch(removeExpense(item.expense.id))
 store.dispatch(editExpense(item2.expense.id, { description: 'magasin de vêtements', amount: 2450 }))
 
 
-ReactDOM.render(<div><AppRouter /></div>, document.querySelector('#root'))
+const jsx = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+)
+
+ReactDOM.render(jsx, document.querySelector('#root'))
