@@ -1,3 +1,10 @@
+## Expenses Tracker
+
+ Expense Tracking App to practice my skills on React, React Router, Redux, SCSS & some external libraries
+
+
+
+====================================================================================================================================
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
