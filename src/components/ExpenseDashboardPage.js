@@ -3,7 +3,7 @@ import ExpenseList from './ExpenseList'
 
 const ExpenseDashboardPage = () => (
   <div>
-    <h2>Expense Dashboard Page component</h2>
+    <h2>Dashboard</h2>
     <ExpenseList />
   </div>
 )

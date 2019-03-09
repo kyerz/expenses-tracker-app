@@ -1,11 +1,24 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import ExpenseListItem from './ExpenseListItem'
 
-const ExpenseList = () => (
+const ExpenseList = (props) => (
   <div>
-    <h2>Expense List Component</h2>
-    <ExpenseListItem />
+    {props.expenses.map(expense => {
+      return (
+        <ExpenseListItem
+          key={expense.id}
+          {...expense}
+        />
+      )
+    })}
   </div>
 )
 
-export default ExpenseList
+const mapStateToProps = (state) => {
+  return {
+    expenses: state.expenses
+  }
+}
+
+export default connect(mapStateToProps)(ExpenseList)
