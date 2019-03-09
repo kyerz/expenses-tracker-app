@@ -5,10 +5,14 @@ import { Provider } from 'react-redux'
 import './styles/base/style.css'
 import initStore from './store/initStore'
 import { addExpense, removeExpense, editExpense } from './actions/expenses'
+import visibleExpensesFilter from './filters/expenses'
 
 const store = initStore()
 
-store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => {
+  const state = store.getState()
+  console.log(visibleExpensesFilter(state.expenses, state.filters))
+})
 
 //dummy dispatch
 store.dispatch(addExpense({ description: 'facture d\'électricité', amount: 13000, createdAt: 150 }))
