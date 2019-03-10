@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import ExpenseListItem from './ExpenseListItem'
 import ExpenseListFilters from './ExpenseListFilters'
 import visibleExpensesFilter from '../filters/expenses'
+import totalExpense from '../filters/total-expenses'
 
 const ExpenseList = (props) => (
   <div>
