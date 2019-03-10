@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class ExpenseForm extends Component {
 
   state = {
-    description: '',
-    note: "",
-    amount: '',
+    description: this.props.expense ? this.props.expense.description : '',
+    note: this.props.expense ? this.props.expense.note : '',
+    amount: this.props.expense ? this.props.expense.amount : '',
     error: ''
   }
 

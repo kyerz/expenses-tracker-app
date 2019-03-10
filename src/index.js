@@ -16,9 +16,9 @@ store.subscribe(() => {
 
 
 //dummy dispatch
-store.dispatch(addExpense({ description: 'facture d\'électricité', amount: 13000, createdAt: 150 }))
-store.dispatch(addExpense({ description: 'Facture d\'eau', amount: 6500, createdAt: 300 }))
-store.dispatch(addExpense({ description: 'Location voiture', amount: 8500, createdAt: 75 }))
+store.dispatch(addExpense({ description: 'facture d\'électricité', amount: 13000, createdAt: 1552183636916 }))
+store.dispatch(addExpense({ description: 'Facture d\'eau', amount: 6500, createdAt: 1552184837125 }))
+store.dispatch(addExpense({ description: 'Location voiture', amount: 8500, createdAt: 1567928619734 }))
 
 
 const jsx = (
