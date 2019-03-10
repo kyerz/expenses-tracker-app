@@ -21,7 +21,6 @@ store.dispatch(addExpense({ description: 'Facture d\'eau', amount: 6500, created
 store.dispatch(addExpense({ description: 'Location voiture', amount: 8500, createdAt: 75 }))
 
 
-
 const jsx = (
   <Provider store={store}>
     <AppRouter />
