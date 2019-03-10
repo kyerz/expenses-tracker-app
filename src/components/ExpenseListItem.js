@@ -9,7 +9,7 @@ const ExpenseListItem = ({ description, amount, createdAt, id }) => {
   return (
     <div>
       <Link to={`/edit/${id}`}><h3>{description}</h3></Link>
-      <p>{amount}€ - {moment(createdAt).locale('fr', localization).format('DD MMMM GGGG, LTS')}</p>
+      <p>{amount}€ - {moment(createdAt).locale('fr', localization).format('DD MMMM GGGG')}</p>
     </div>
   )
 }
