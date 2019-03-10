@@ -76,6 +76,7 @@ class ExpenseForm extends Component {
             placeholder="amount"
             onChange={this.onAmountChange}
             value={this.state.amount}
+            step="0.01"
           />
           <SingleDatePicker
             date={this.state.date}
