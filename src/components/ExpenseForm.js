@@ -10,7 +10,7 @@ class ExpenseForm extends Component {
   state = {
     description: this.props.expense ? this.props.expense.description : '',
     note: this.props.expense ? this.props.expense.note : '',
-    amount: this.props.expense ? this.props.expense.amount : '',
+    amount: this.props.expense ? (this.props.expense.amount / 100).toString() : '',
     error: '',
     date: moment(),
     dateFocused: false
@@ -44,7 +44,7 @@ class ExpenseForm extends Component {
       const expense = {
         description: this.state.description,
         note: this.state.note,
-        amount: this.state.amount,
+        amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.date.valueOf()
       }
       this.props.onSubmit(expense)
