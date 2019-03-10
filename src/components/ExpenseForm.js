@@ -3,6 +3,7 @@ import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates'
 import 'react-dates/lib/css/_datepicker.css'
 import moment from 'moment'
+import uuid from 'uuid'
 
 class ExpenseForm extends Component {
 
@@ -81,7 +82,7 @@ class ExpenseForm extends Component {
             onDateChange={this.onDateChange}
             focused={this.state.dateFocused}
             onFocusChange={this.onFocusChange}
-            id="your_unique_id"
+            id={uuid()}
           />
           <textarea
             placeholder="you can write a note here"
