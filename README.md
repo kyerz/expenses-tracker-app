@@ -1,6 +1,6 @@
 ## Expenses Tracker
 
- Expense Tracking App to practice my skills on React, React Router, Redux, SCSS & some external libraries
+ Expense Tracking App to practice my skills on React, React Router, Redux, redux-thunk, Firebase & some external libraries
 
 
 
