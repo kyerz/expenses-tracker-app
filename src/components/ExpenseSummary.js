@@ -5,11 +5,11 @@ import visibleExpensesFilter from '../filters/expenses'
 import totalExpenses from '../filters/total-expenses'
 
 const ExpenseSummary = ({ expensesCount, expensesTotal }) => {
-  const expenseWord = expensesCount === 1 ? 'expense' : 'expenses'
+  const expenseWord = expensesCount === 1 ? 'dépense' : 'dépenses'
   const formattedExpensesTotal = numeral(expensesTotal / 100).format('$0,0.00')
   return (
     <div>
-      <h1>Viewing {expensesCount} {expenseWord} totalling {formattedExpensesTotal}</h1>
+      <h1>Affichage de {expensesCount} {expenseWord} totalisant {formattedExpensesTotal}</h1>
     </div>
   )
 }

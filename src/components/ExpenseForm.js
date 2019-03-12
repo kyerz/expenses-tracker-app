@@ -37,7 +37,7 @@ class ExpenseForm extends Component {
     e.preventDefault()
 
     if (!this.state.description || !this.state.amount) {
-      this.setState(() => ({ error: 'Please provide a description and amount' }))
+      this.setState(() => ({ error: 'Veuillez fournir une description et son montant' }))
     } else {
       this.setState(() => ({ error: '' }))
 
@@ -73,7 +73,7 @@ class ExpenseForm extends Component {
           />
           <input
             type="number"
-            placeholder="amount"
+            placeholder="montant"
             onChange={this.onAmountChange}
             value={this.state.amount}
             step="0.01"
@@ -88,7 +88,7 @@ class ExpenseForm extends Component {
             isOutsideRange={() => false}
           />
           <textarea
-            placeholder="you can write a note here"
+            placeholder="vous pouvez écrire une note ici"
             cols="30"
             rows="2"
             onChange={this.onNoteChange}
@@ -97,7 +97,7 @@ class ExpenseForm extends Component {
           </textarea>
           <button
             type="submit"
-          >Add Expense</button>
+          >Ajouter Dépense</button>
         </form>
       </div>
     )

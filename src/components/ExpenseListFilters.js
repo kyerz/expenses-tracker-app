@@ -7,7 +7,7 @@ const ExpenseListFilters = (props) => (
   <div>
     <input
       type="text"
-      placeholder="search content"
+      placeholder="rechercher une dépense"
       value={props.filters.text}
       onChange={(e) => props.dispatch(setSearchText(e.target.value))}
     />
@@ -22,7 +22,7 @@ const ExpenseListFilters = (props) => (
       }}
     >
       <option value="date">date</option>
-      <option value="amount">amount</option>
+      <option value="amount">montant</option>
     </select>
   </div >
 )

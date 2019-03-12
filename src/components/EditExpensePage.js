@@ -5,7 +5,7 @@ import { startEditExpense, startRemoveExpense } from '../actions/expenses'
 
 const EditExpensePage = (props) => (
   <div>
-    <h2>Edit Expense</h2>
+    <h2>Editer une Dépense</h2>
     <ExpenseForm
       expense={props.expense}
       onSubmit={(expense) => {
@@ -18,7 +18,7 @@ const EditExpensePage = (props) => (
         props.dispatch(startRemoveExpense({ id: props.expense.id }))
         props.history.push('/')
       }}
-    >Delete Expense
+    >Supprimer Dépense
     </button>
   </div>
 )
