@@ -42,8 +42,6 @@ export const editExpense = (id, updates) => ({
 
 
 //set expenses
-
-
 export const setExpenses = (expenses) => ({
   type: 'SET_EXPENSES',
   expenses
