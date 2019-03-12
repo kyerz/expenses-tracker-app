@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import './styles/base/style.css'
 import initStore from './store/initStore'
 import visibleExpensesFilter from './filters/expenses'
+import './firebase/firebase'
 
 const store = initStore()
 
