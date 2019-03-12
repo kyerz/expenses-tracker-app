@@ -1,5 +1,4 @@
 //action creators expenses
-// import uuid from 'uuid'
 import database from '../firebase/firebase'
 
 //add expense
@@ -46,6 +45,15 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 })
+
+export const startEditExpense = (id, updates) => {
+  return (dispatch) => {
+    database.ref(`expenses/${id}`).update(updates)
+      .then(() => {
+        dispatch(editExpense(id, updates))
+      })
+  }
+}
 
 //set expenses
 export const setExpenses = (expenses) => ({
