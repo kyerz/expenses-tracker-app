@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import './styles/base/style.css'
 import initStore from './store/initStore'
 import { startSetExpenses } from './actions/expenses'
-import './firebase/firebase'
+import { firebase } from './firebase/firebase'
 
 const store = initStore()
 
@@ -22,4 +22,11 @@ store.dispatch(startSetExpenses()).then(() => {
   ReactDOM.render(jsx, document.querySelector('#root'))
 })
 
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    console.log('log in')
+  } else {
+    console.log('log out')
+  }
+})
 
