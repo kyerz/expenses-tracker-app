@@ -38,7 +38,10 @@ class ExpenseForm extends Component {
 
     if (!this.state.description || !this.state.amount) {
       this.setState(() => ({ error: 'Veuillez fournir une description et son montant' }))
-    } else {
+    } else if (!this.state.description.trim()) {
+      this.setState(() => ({ error: 'Le champ description est invalide' }))
+    }
+    else {
       this.setState(() => ({ error: '' }))
 
       const expense = {
