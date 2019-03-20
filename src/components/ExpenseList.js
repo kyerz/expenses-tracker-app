@@ -5,14 +5,20 @@ import visibleExpensesFilter from '../filters/expenses'
 
 const ExpenseList = (props) => (
   <div>
-    {props.expenses.map(expense => {
-      return (
-        <ExpenseListItem
-          key={expense.id}
-          {...expense}
-        />
+    {props.expenses.length === 0 ? (
+      <p>Aucune dépense</p>
+    ) :
+      (
+        props.expenses.map(expense => {
+          return (
+            <ExpenseListItem
+              key={expense.id}
+              {...expense}
+            />
+          )
+        })
       )
-    })}
+    }
   </div>
 )
 
