@@ -15,4 +15,8 @@ const database = firebase.database()
 
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 
+googleAuthProvider.setCustomParameters({
+  'prompt': 'select_account'                  //redemande au user de choisir un email, à chaque nouvelle connexion
+});
+
 export { firebase, googleAuthProvider, database as default }
