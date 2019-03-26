@@ -6,7 +6,9 @@ import { startEditExpense, startRemoveExpense } from '../actions/expenses'
 const EditExpensePage = (props) => (
   <div>
     <div className="page-header">
-      <h1 className="page-header__title">Editer une Dépense</h1>
+      <div className="content-container">
+        <h1 className="page-header__title">Editer une Dépense</h1>
+      </div>
     </div>
     <div className="content-container">
       <ExpenseForm

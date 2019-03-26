@@ -14,9 +14,10 @@
   padding: $l-size $m-size;
   text-align: center;
   width: 30rem;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.box-layout_title {
+.box-layout__title {
   margin: 0 0 $m-size 0;
   line-height: 1;
 }
