@@ -7,6 +7,7 @@ import initStore from './store/initStore'
 import { startSetExpenses } from './actions/expenses'
 import { login, logout } from './actions/auth'
 import { firebase } from './firebase/firebase'
+import LoadingPage from './components/LoadingPage'
 
 const store = initStore()
 
@@ -26,7 +27,7 @@ const renderApp = () => {
   }
 }
 
-ReactDOM.render(<p>Loading...</p>, document.querySelector('#root'))
+ReactDOM.render(<LoadingPage />, document.querySelector('#root'))
 
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
