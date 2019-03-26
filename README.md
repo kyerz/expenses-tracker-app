@@ -2,6 +2,7 @@
 
  Expense Tracking App to practice my skills on React, React Router, Redux, redux-thunk, Firebase & some external libraries
 
+Link app:  https://expenses-tracker-app.herokuapp.com
 
 
 =================================================================================
